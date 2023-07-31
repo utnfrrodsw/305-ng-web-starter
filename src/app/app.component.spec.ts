@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title '305-ng-web-starter'`, () => {
+  it(`should have as title '304-ng-web-starter'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('305-ng-web-starter');
+    expect(app.title).toEqual('304-ng-web-starter');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('305-ng-web-starter app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('304-ng-web-starter app is running!');
   });
 });

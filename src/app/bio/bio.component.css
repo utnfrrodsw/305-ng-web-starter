@@ -1,0 +1,10 @@
+.img-bio {
+    display: block;
+    margin: 0 auto;
+}
+
+.text-bio {
+    text-align: justify;
+    font-style: italic;
+    line-height: 2;
+}
