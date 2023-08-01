@@ -5,19 +5,23 @@ import { ContactLayoutComponent } from './contact-layout/contact-layout.componen
 
 const routes: Routes = [
   {
-    path: '',
-    component: ContactLayoutComponent,
-    children: [
-      {
-        path: 'mensaje',
-        component: ContactComponent
-      },
-      {
-        path: '**',
-        redirectTo: 'mensaje'
-      }
-    ]
-  }
+    path: 'contacto',
+    component: ContactComponent
+  },
+  // {
+  //   path: '',
+  //   component: ContactLayoutComponent,
+  //   children: [
+  //     {
+  //       path: 'mensaje',
+  //       component: ContactComponent
+  //     },
+  //     {
+  //       path: '**',
+  //       redirectTo: 'mensaje'
+  //     }
+  //   ]
+  // }
 ];
 
 @NgModule({

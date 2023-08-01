@@ -4,6 +4,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BioComponent } from './bio/bio.component';
+import { AuthGuard } from './auth.guard';
+
 
 const routes: Routes = [
   {
@@ -12,12 +14,18 @@ const routes: Routes = [
   },
   {
     path: 'bio',
-    component: BioComponent
+    component: BioComponent,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'contacto',
-    loadChildren: () => import('./contact/contact.module').then(module => module.ContactModule),
+    path: 'bio/:id',
+    component: BioComponent,
+    canActivate: [AuthGuard]
   },
+  // {
+  //   path: 'contacto',
+  //   loadChildren: () => import('./contact/contact.module').then(module => module.ContactModule),
+  // },
   {
     path: '',
     redirectTo: 'home',

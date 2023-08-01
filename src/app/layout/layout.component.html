@@ -1,10 +1,14 @@
 <div id="container" class="container">
   <div class="container-left">
     <div class="menu">
-      <a class="menu-item" href="home">Home</a>
-      <a class="menu-item" href="bio">Bio</a>
-      <a class="menu-item" href="contacto">Contacto</a>
-      <a class="menu-item" href="mrx">Mr. X</a>
+      <!-- <a class="menu-item" [routerLink]="['home']">Home</a>
+      <a class="menu-item" [routerLink]="['bio']">Bio</a>
+      <a class="menu-item" [routerLink]="['contacto']">Contacto</a>
+      <a class="menu-item" [routerLink]="['mrx']">Mr. X</a> -->
+      <a class="menu-item" (click)="goTo('home')">Home</a>
+      <a class="menu-item" (click)="goTo('bio')">Bio</a>
+      <a class="menu-item" (click)="goTo('contacto')">Contacto</a>
+      <a class="menu-item" (click)="goTo('mrx')">Mr. X</a>
     </div>
   </div>
   <div class="container-right">
