@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact.component';
 import { ContactRouterModule } from './contact.router.module';
 import { ContactLayoutComponent } from './contact-layout/contact-layout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { ContactLayoutComponent } from './contact-layout/contact-layout.componen
   ],
   imports: [
     CommonModule,
-    ContactRouterModule
+    ContactRouterModule,
+    ReactiveFormsModule,
   ]
 })
 export class ContactModule { }

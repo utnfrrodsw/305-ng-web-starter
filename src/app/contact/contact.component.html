@@ -1,1 +1,26 @@
 <p>contact works!</p>
+
+<input type="text" [formControl]="formControlColor">
+<label class="error" *ngIf="formControlColor.errors">{{formControlColor.errors['colorError']}}</label>
+
+<p>Value: {{formControlColor.value}}</p>
+
+<p>Valid: {{formControlColor.valid}}</p>
+
+<p>Errors: {{formControlColor.errors | json}}</p>
+
+<hr>
+
+<form [formGroup]="form" (ngSubmit)="handleSubmit()">
+    <input type="text" formControlName="name" [ngClass]="{'has-error': !!form.get('name')?.errors}">
+    <label class="error" *ngIf="form.get('name')?.errors">Este campo es requerido</label>
+<br>
+    <input type="text" formControlName="surname">
+<br>
+    <input type="text" formControlName="age">
+
+
+    <button type="submit">Contactar</button>
+</form>
+
+Form Valid: {{form.valid}}

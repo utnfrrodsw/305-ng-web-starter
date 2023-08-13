@@ -1,0 +1,9 @@
+.error {
+    color: red;
+    font-size: small;
+}
+
+.has-error {
+    border: 2px solid red;
+    color: red;
+}
