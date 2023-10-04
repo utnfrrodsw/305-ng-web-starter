@@ -14,6 +14,10 @@ export class LayoutComponent implements OnInit {
   }
 
   goTo(path: string) {
-    this.router.navigate([path]);
+    if (path === 'some-url') {
+      this.router.navigate([path]);
+    } else {
+      this.router.navigate(['login']);
+    }
   }
 }
